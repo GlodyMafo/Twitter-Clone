@@ -1,0 +1,27 @@
+:root{
+    --blue: #1D9BF0;
+  }
+.nav{
+    display: flex;
+    justify-content: space-between;
+  }
+  .profile{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding-right: 1rem;
+  }
+  .main{
+    display: flex;
+  }
+  .main-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-icons{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 35rem;
+    color: var(--blue) ;
+  }
