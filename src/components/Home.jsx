@@ -14,17 +14,20 @@ export default function Home() {
         {/* *******************************Main************************** */}
 
         <div className="main">
-          <img
-            className="profile"
-            src="src/assets/_MG_4654_083242-removebg-preview.png"
-            alt=""
-          />
-          <div>
+          <span className="main-intro">
+            <img
+              className="Home-avatar"
+              src="src/assets/_MG_4654_083242-removebg-preview.png"
+              alt=""
+            />
             <p>What's happening?</p>
+          </span>
+         </div>
 
+          <div>
             <div className="main-content">
-              <div className="main-icons">
-                <svg
+            <div className="main-icons">
+            <svg
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -125,11 +128,11 @@ export default function Home() {
                 </svg>
               </div>
               <div>
-                <Button name="tweet" />
+                <Button name="Tweet" class="Home-btn" />
               </div>
             </div>
           </div>
-        </div>
+        
       </section>
     </>
   );

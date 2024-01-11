@@ -1,27 +1,52 @@
-:root{
-    --blue: #1D9BF0;
-  }
-.nav{
+:root {
+  --blue: #1d9bf0;
+}
+.home{
+    border: 0.5px solid  rgba(190, 186, 186, 0.511);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  border: .5px solid rgba(190, 186, 186, 0.511);
+  padding-inline: 2rem;
+}
+.Home-avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding-right: 1rem;
+}
+.main {
+  display: flex;
+  /* border:.5px solid rgba(190, 186, 186, 0.511);  */
+  padding: .5rem 2rem 0 2rem;
+  justify-content: space-between;
+}
+.main-intro{
     display: flex;
-    justify-content: space-between;
-  }
-  .profile{
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    padding-right: 1rem;
-  }
-  .main{
-    display: flex;
-  }
-  .main-content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .main-icons{
-    display: flex;
-    justify-content: space-between;
-    padding-right: 35rem;
-   
-  }
+    padding-bottom: 1rem;
+}
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem 1rem 3.5rem;
+}
+.main-icons{
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  cursor: pointer;
+}
+.Home-btn {
+  background-color: var(--blue);
+  color: White;
+  border-style: none;
+  padding: .8rem;
+  border-radius: 2.5rem;
+  width: 6rem;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+}

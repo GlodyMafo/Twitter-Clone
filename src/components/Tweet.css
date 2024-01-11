@@ -1,0 +1,45 @@
+.Tweet {
+  border: 0.5px solid rgba(190, 186, 186, 0.511);
+  padding-inline: 2rem;
+  margin:0;
+}
+.Tweet:hover{
+    background-color: rgba(41, 41, 42, 0.655);
+}
+.react-btn {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5rem;
+  width: 80%;
+  align-items: center;
+}
+.pub {
+  display: flex;
+  align-items: center;
+  padding-block: 0;
+}
+.avatar-pub {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding-right: 1rem;
+}
+.pub-content {
+  padding-left: 4rem;
+}
+.img-pub {
+  max-width: 45rem;
+  border: 2px solid rgba(255, 255, 255, 0.748);
+  border-radius: 25px;
+}
+.reaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.User-name{
+    font-weight: bold;
+}
+.User-time{
+    padding-left: .5rem;
+}
