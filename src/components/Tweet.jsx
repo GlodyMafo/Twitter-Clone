@@ -1,38 +1,21 @@
 import "./Tweet.css";
 
-
-export default function Tweet() {
+export default function Tweet(props) {
   return (
     <section className="Tweet">
       <div className="pub">
         <div>
           <div className="pub">
-            <img
-              className="avatar-pub"
-              src="src/assets/_MG_4654_083242-removebg-preview.png"
-              alt=""
-            />
-            <p className="User-name">Glody</p>
+            <img src={props.author_avatar} className="avatar-pub" />
+            <p className="User-name"> {props.source} </p>
             <img src="/src/assets/Icons/Verified.svg" alt="" />
-            <p>@Glody</p>
-            <p className="User-time">7 m</p>
+            <p> {props.id} </p>
+            <p className="User-time"> {props.date} </p>
           </div>
           <div className="pub-content">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-              quibusdam neque necessitatibus corrupti nostrum laboriosam vitae,
-              non illo dignissimos reprehenderit. Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Ea nemo laborum cum tempore
-              cupiditate. Nemo corrupti voluptatum veniam repellat repudiandae
-              aliquid perspiciatis accusantium ab voluptates. Dolores ut ab
-              fugiat quaerat?
-            </p>
+            <p>{props.text}</p>
 
-            <img
-              className="img-pub"
-              src="src/assets/IMG-20231227-WA0069.jpg"
-              alt=""
-            />
+            <img className="img-pub" src={props.image} />
           </div>
         </div>
       </div>
@@ -54,7 +37,7 @@ export default function Tweet() {
             />
           </svg>
 
-          <p>57</p>
+          <p> {props.replies} </p>
         </div>
         <div className="reaction">
           <svg
@@ -70,7 +53,7 @@ export default function Tweet() {
             />
           </svg>
 
-          <p>144</p>
+          <p> {props.retweets} </p>
         </div>
         <div className="reaction">
           <svg
@@ -86,7 +69,7 @@ export default function Tweet() {
             />
           </svg>
 
-          <p>108</p>
+          <p> {props.favorites} </p>
         </div>
         <svg
           width="24"

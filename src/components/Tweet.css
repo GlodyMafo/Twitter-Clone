@@ -1,10 +1,11 @@
 .Tweet {
   border: 0.5px solid rgba(190, 186, 186, 0.511);
   padding-inline: 2rem;
-  margin:0;
+  padding-top: 1rem;
+  margin: 0;
 }
-.Tweet:hover{
-    background-color: rgba(41, 41, 42, 0.655);
+.Tweet:hover {
+  background-color: rgba(41, 41, 42, 0.655);
 }
 .react-btn {
   display: flex;
@@ -19,10 +20,9 @@
   padding-block: 0;
 }
 .avatar-pub {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  padding-right: 1rem;
+  border-radius: 100%;
+  width: 65px;
+  height: 65px;
 }
 .pub-content {
   padding-left: 4rem;
@@ -37,9 +37,9 @@
   justify-content: space-between;
   align-items: center;
 }
-.User-name{
-    font-weight: bold;
+.User-name {
+  font-weight: bold;
 }
-.User-time{
-    padding-left: .5rem;
+.User-time {
+  padding-left: 0.5rem;
 }
