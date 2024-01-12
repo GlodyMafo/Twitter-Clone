@@ -1,0 +1,23 @@
+:root {
+    --blue-hover: #56acea;
+    --blue: #1d9bf0;
+    --text:white;
+  }
+.side-element{
+    display: flex;
+   align-items: center;
+}
+.side-title{
+    padding-left: 2rem;
+}
+.side-btn{
+    background-color: var(--blue);
+    color: var(--text);
+    border-style: none;
+    padding: 0.8rem;
+    border-radius: 2.5rem;
+    width: 12rem;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}

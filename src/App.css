@@ -7,12 +7,18 @@
 
 body {
   background-color: black;
-  padding-inline: 30rem;
+  padding-inline: 16rem;
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
 }
-.bdy {
+.disposition {
   display: flex;
   justify-content: space-between;
+}
+.home-app{
+  width: 60%;
+}
+side-left{
+  width: ;
 }
 

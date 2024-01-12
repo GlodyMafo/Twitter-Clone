@@ -3,13 +3,20 @@ import "./App.css";
 import tweets from "./tweets-x.json";
 import Home from "./components/Home";
 import Tweet from "./components/Tweet";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <Home />
+    <div className="disposition">
+      <div className="side-left">
+      <Sidebar/>
+      </div>
+    
+    <div className="home-app">
+    <Home />
       {tweets.map((item) => (
         <Tweet
           author_avatar={item.author_avatar}
@@ -22,6 +29,11 @@ function App() {
           favorites={item.favorites}
         />
       ))}
+    </div>
+    <div className="side-right">
+      <input type="text" />
+    </div>
+    
       {/* <Tweet
         author_avatar="src/assets/IMG-20231126-WA0007~2 (2).jpg"
         source="Glody"
@@ -39,6 +51,7 @@ function App() {
         retweets="569"
         favorites="600"
       /> */}
+      </div>
     </>
   );
 }
