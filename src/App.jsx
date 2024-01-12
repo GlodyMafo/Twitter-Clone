@@ -3,7 +3,7 @@ import "./App.css";
 import tweets from "./tweets-x.json";
 import Home from "./components/Home";
 import Tweet from "./components/Tweet";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/Sidebar-left";
 
 function App() {
   const [count, setCount] = useState(0);

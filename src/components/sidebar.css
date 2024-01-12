@@ -1,23 +1,42 @@
 :root {
-    --blue-hover: #56acea;
-    --blue: #1d9bf0;
-    --text:white;
-  }
-.side-element{
+  --blue-hover: #56acea;
+  --blue: #1d9bf0;
+  --text: #ffffff;
+}
+.side-element {
+  display: flex;
+  align-items: center;
+}
+.side-title {
+  padding-left: 2rem;
+}
+.side-btn {
+  background-color: var(--blue);
+  color: var(--text);
+  border-style: none;
+  padding: 0.8rem;
+  border-radius: 2.5rem;
+  width: 12rem;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+.side-avatar {
+  border-radius: 100%;
+  width: 45px;
+  height: 45px;
+}
+.bottom-slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18rem;
+}
+.bottom-slide-content{
     display: flex;
-   align-items: center;
+    align-items: center;   
+    width: 70%;
 }
-.side-title{
-    padding-left: 2rem;
-}
-.side-btn{
-    background-color: var(--blue);
-    color: var(--text);
-    border-style: none;
-    padding: 0.8rem;
-    border-radius: 2.5rem;
-    width: 12rem;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
+.name{
+    padding-left: 1rem;
 }

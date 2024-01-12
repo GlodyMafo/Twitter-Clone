@@ -15,7 +15,7 @@ export default function Tweet(props) {
           <div className="pub-content">
             <p>{props.text}</p>
 
-            <img className="img-pub" src={props.image} />
+            {props.image && <img className="img-pub" src={props.image} />}
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@ export default function Tweet(props) {
             />
           </svg>
 
-          <p> {props.replies} </p>
+          <p className="react"> {props.replies} </p>
         </div>
         <div className="reaction">
           <svg
@@ -53,7 +53,7 @@ export default function Tweet(props) {
             />
           </svg>
 
-          <p> {props.retweets} </p>
+          <p className="react"> {props.retweets} </p>
         </div>
         <div className="reaction">
           <svg
@@ -69,7 +69,7 @@ export default function Tweet(props) {
             />
           </svg>
 
-          <p> {props.favorites} </p>
+          <p className="react"> {props.favorites} </p>
         </div>
         <svg
           width="24"
