@@ -9,6 +9,7 @@ body {
   padding-inline: 16rem;
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
 .disposition {
   display: flex;

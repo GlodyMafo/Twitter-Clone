@@ -9,7 +9,7 @@ export default function Tweet(props) {
             <img src={props.author_avatar} className="avatar-pub" />
             <p className="User-name"> {props.source} </p>
             <img src="/src/assets/Icons/Verified.svg" alt="" />
-            <p> {props.id} </p>
+            <p>@{props.source} </p>
             <p className="User-time"> {props.date} </p>
           </div>
           <div className="pub-content">
