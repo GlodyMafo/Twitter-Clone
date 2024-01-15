@@ -1,5 +1,5 @@
 import Button from "./Btn";
-import "./sidebar.css";
+import "./sidebar-left.css";
 
 export default function Sidebar() {
   return (

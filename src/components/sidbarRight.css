@@ -1,0 +1,61 @@
+.Side-content{
+    margin:0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.side-content--background{
+    margin: 1rem;
+    padding: 1.2rem;
+    background-color: rgb(92, 92, 92);
+     border-radius: 1.5rem;
+     width: 15vw;
+}
+
+.Side-content--title{
+    padding: 0;
+    margin: 0;
+}
+.Side-content--paragraph{
+    padding: 0 0 2rem 0;
+    margin: 0;
+}
+.ShowMore-trends{
+    color: #1d9bf0;
+    outline: none;
+    border: none;
+    background-color: inherit;
+    padding: 0;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.avatar-follow {
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+  }
+.Follow-disposition{
+    display: flex;
+    align-items: center;
+}
+.User-name{
+    padding-left: .5rem;
+}
+.follow-btn{
+    background-color: white;
+  color: black;
+  border-style: none;
+  padding: 0.5rem;
+  border-radius: 2.5rem;
+  width: 4rem;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+.Follow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

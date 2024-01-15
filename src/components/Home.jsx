@@ -22,7 +22,7 @@ export default function Home() {
             />
             <textarea
               className="intro-msg"
-              cols="77"
+              cols="45"
               rows="auto"
               placeholder="What is happening?"
             ></textarea>

@@ -4,6 +4,7 @@ import tweets from "./tweets-x.json";
 import Home from "./components/Home";
 import Tweet from "./components/Tweet";
 import Sidebar from "./components/Sidebar-left";
+import SidebarRright from "./components/Sidebar-right";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -31,26 +32,8 @@ function App() {
       ))}
     </div>
     <div className="side-right">
-      <input type="text" />
+   <SidebarRright/>
     </div>
-    
-      {/* <Tweet
-        author_avatar="src/assets/IMG-20231126-WA0007~2 (2).jpg"
-        source="Glody"
-        date="3 Jav"
-        id="@glody"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-              quibusdam neque necessitatibus corrupti nostrum laboriosam vitae,
-              non illo dignissimos reprehenderit. Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Ea nemo laborum cum tempore
-              cupiditate. Nemo corrupti voluptatum veniam repellat repudiandae
-              aliquid perspiciatis accusantium ab voluptates. Dolores ut ab
-              fugiat quaerat?"
-        image="src/assets/IMG-20231227-WA0069.jpg"
-        replies="558"
-        retweets="569"
-        favorites="600"
-      /> */}
       </div>
     </>
   );
