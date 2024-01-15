@@ -6,7 +6,7 @@ import "./sidbarRight.css";
 export default function SidebarRright() {
   return (
     <>
-      <input type="text" />
+      <input className="RightInput" type="text" placeholder="Search twitter"/>
 
       <div className="side-content--background">
         <div className="Side-content">

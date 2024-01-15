@@ -1,3 +1,11 @@
+.RightInput{
+    border-radius: 1.5rem;
+    border: none;
+   width: 17vw;
+   height: 2.5rem;
+   background-color: rgba(87, 86, 86, 0.514);
+   margin-left:.8rem ;
+}
 .Side-content{
     margin:0px;
     padding: 0px;
@@ -8,7 +16,7 @@
 .side-content--background{
     margin: 1rem;
     padding: 1.2rem;
-    background-color: rgb(92, 92, 92);
+    background-color: rgba(87, 86, 86, 0.514);
      border-radius: 1.5rem;
      width: 15vw;
 }
@@ -25,7 +33,7 @@
     color: #1d9bf0;
     outline: none;
     border: none;
-    background-color: inherit;
+    background-color: transparent;
     padding: 0;
     font-size: 16px;
     font-weight: bold;
