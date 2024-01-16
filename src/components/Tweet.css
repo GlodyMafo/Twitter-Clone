@@ -4,9 +4,6 @@
   padding-top: 1rem;
   margin: 0;
 }
-.Tweet:hover {
-  background-color: rgba(41, 41, 42, 0.655);
-}
 .react-btn {
   display: flex;
   justify-content: space-between;
