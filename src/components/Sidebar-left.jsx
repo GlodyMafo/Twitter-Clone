@@ -172,7 +172,7 @@ export default function Sidebar() {
         <div className="bottom-slide-content">
           <img
             className="side-avatar"
-            src="src/assets/_MG_4654_083242-removebg-preview.png"
+            src="src/assets/images/_MG_4654_083242.png"
             alt=""
           />
           <div>

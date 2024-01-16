@@ -1,5 +1,5 @@
 :root {
-  --blue-hover: #56acea;
+  --blue-hover: #147eca;
   --blue: #1d9bf0;
   --text: #ffffff;
 }
@@ -12,6 +12,18 @@
 }
 .side-btn {
   background-color: var(--blue);
+  color: var(--text);
+  border-style: none;
+  padding: 0.8rem;
+  border-radius: 2.5rem;
+  width: 12rem;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.side-btn:hover {
+  background-color: var(--blue-hover);
   color: var(--text);
   border-style: none;
   padding: 0.8rem;

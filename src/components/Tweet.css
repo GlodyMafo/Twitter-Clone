@@ -19,7 +19,7 @@
 }
 .pub {
   display: flex;
-  align-items: center;
+ 
   padding-block: 0;
 }
 .avatar-pub {
@@ -28,7 +28,7 @@
   height: 65px;
 }
 .pub-content {
-  padding-left: 4rem;
+  padding-left: 1rem;
 }
 .img-pub {
   min-width: 18rem;
@@ -49,3 +49,14 @@
 .User-time {
   padding-left: 0.5rem;
 }
+.identity{
+  display:flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.text{
+  padding: 0 0 1rem 0.5rem;
+  margin: 0;
+}
+

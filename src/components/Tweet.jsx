@@ -4,19 +4,18 @@ export default function Tweet(props) {
   return (
     <section className="Tweet">
       <div className="pub">
-        <div>
-          <div className="pub">
-            <img src={props.author_avatar} className="avatar-pub" />
+        <img src={props.author_avatar} className="avatar-pub" />
+        <div className="pub-content">
+          <div className="identity">
             <p className="User-name"> {props.source} </p>
             <img src="/src/assets/Icons/Verified.svg" alt="" />
             <p>@{props.source} </p>
             <p className="User-time"> {props.date} </p>
           </div>
-          <div className="pub-content">
-            <p>{props.text}</p>
 
-            {props.image && <img className="img-pub" src={props.image} />}
-          </div>
+          <p className="text">{props.text}</p>
+
+          {props.image && <img className="img-pub" src={props.image} />}
         </div>
       </div>
 

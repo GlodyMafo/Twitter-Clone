@@ -6,7 +6,7 @@ import "./sidbarRight.css";
 export default function SidebarRright() {
   return (
     <>
-      <input className="RightInput" type="text" placeholder="Search twitter"/>
+      <input className="RightInput" type="text" placeholder="Search twitter" />
 
       <div className="side-content--background">
         <div className="Side-content">
@@ -36,7 +36,7 @@ export default function SidebarRright() {
       </div>
 
       <div className="side-content--background">
-        <h3 >Who to follow</h3>
+        <h3>Who to follow</h3>
         <FollowingProposition />
         <FollowingProposition />
         <FollowingProposition />

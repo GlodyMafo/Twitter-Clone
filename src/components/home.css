@@ -1,6 +1,7 @@
 
 :root {
   --blue: #1d9bf0;
+  --blue-hover: #147eca;
 }
 .home {
   margin-top: 0;
@@ -55,6 +56,18 @@
 }
 .Home-btn {
   background-color: var(--blue);
+  color: White;
+  border-style: none;
+  padding: 0.8rem;
+  border-radius: 2.5rem;
+  width: 6rem;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition:0.5s;
+}
+.Home-btn:hover {
+  background-color: var(--blue-hover);
   color: White;
   border-style: none;
   padding: 0.8rem;
