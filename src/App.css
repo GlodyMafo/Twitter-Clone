@@ -1,7 +1,6 @@
-
 :root {
   --blue: #1d9bf0;
-  --text:white;
+  --text: white;
 }
 
 body {
@@ -15,12 +14,11 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.home-app{
+.home-app {
   width: 50%;
   padding-left: 16rem;
 }
-.side-left{
+.side-left {
   padding-top: 1.7rem;
   position: fixed;
 }
-

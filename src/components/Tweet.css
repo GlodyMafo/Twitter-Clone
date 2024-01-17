@@ -1,6 +1,6 @@
 :root {
   --blue: #1d9bf0;
-  --text:white;
+  --text: white;
 }
 .Tweet {
   border: 0.5px solid rgba(190, 186, 186, 0.237);
@@ -15,13 +15,13 @@
   width: 80%;
   align-items: center;
 }
-.react{
-  padding-left:.5rem ;
+.react {
+  padding-left: 0.5rem;
   cursor: pointer;
 }
 .pub {
   display: flex;
- 
+
   padding-block: 0;
 }
 .avatar-pub {
@@ -35,61 +35,101 @@
 .img-pub {
   min-width: 18rem;
   max-width: 32rem;
-  min-height:14rem ;
+  min-height: 14rem;
   max-height: 28rem;
- 
+
   border-radius: 25px;
 }
-.reaction {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  transition:.2s;
-}
+
 .User-name {
   font-weight: bold;
 }
 .User-time {
   padding-left: 0.5rem;
 }
-.identity{
-  display:flex;
+.identity {
+  display: flex;
   align-items: center;
   margin: 0;
   padding: 0;
 }
-.text{
+.text {
   padding: 0 0 1rem 0.5rem;
   margin: 0;
 }
-/* svg{
+
+.reaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* LES REPLIES */
+
+.replies {
   border: none;
   border-radius: 100%;
-  transition: .2s;
-  padding: 0.4rem;
-} */
-/* svg:hover{
-  cursor: pointer;
-  fill: var(--blue); 
-  background-color: #1d9cf021 ;
-} */
-
-
-.reaction:hover{
-fill: aquamarine;
-color: var(--blue);
-}
-.replies{
-  border: none;
-  border-radius: 100%;
-  transition: .2s;
+  transition: 0.2s;
   padding: 0.4rem;
 }
-.replies:hover{
+.replies:hover {
   cursor: pointer;
-  fill: var(--blue); 
-  background-color: #1d9cf023 ;
+  fill: var(--blue);
+  background-color: #1d9cf037;
   /* box-shadow: 0 0 .1rem var(--blue); */
 }
 
+.reaction-replies:hover {
+  color: var(--blue);
+}
+
+/* LES RETWEETS */
+
+.reaction-retweets:hover {
+  color: rgb(14, 238, 164);
+}
+.retweets {
+  border: none;
+  border-radius: 100%;
+  transition: 0.2s;
+  padding: 0.4rem;
+}
+.retweets:hover {
+  cursor: pointer;
+  fill: rgb(14, 238, 164);
+  background-color: rgba(14, 238, 163, 0.323);
+}
+
+/* FOVORITES */
+
+.reaction-favorites:hover {
+  color: rgb(238, 14, 133);
+}
+.favorites {
+  border: none;
+  border-radius: 100%;
+  transition: 0.2s;
+  padding: 0.4rem;
+}
+.favorites:hover {
+  cursor: pointer;
+  fill: rgb(238, 14, 133);
+  background-color: rgba(238, 14, 133, 0.305);
+}
+
+/* SHARE */
+
+.share {
+  border: none;
+  border-radius: 100%;
+  transition: 0.2s;
+  padding: 0.4rem;
+}
+.share:hover {
+  cursor: pointer;
+  fill: var(--blue);
+  background-color: #1d9cf037;
+  /* box-shadow: 0 0 .1rem var(--blue); */
+}
