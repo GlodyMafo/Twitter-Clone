@@ -6,9 +6,12 @@ import "./sidbarRight.css";
 export default function SidebarRright() {
   return (
     <>
-      <input className="RightInput" type="text" placeholder="Search twitter" />
+    <div className="input-ground">
+    <input className="RightInput" type="text" placeholder="Search twitter" />
+    </div>
+     
 
-      <div className="side-content--background">
+      <div className="side-content--background1">
         <div className="Side-content">
           <h3>Trends for you</h3>
           <svg
@@ -35,7 +38,7 @@ export default function SidebarRright() {
         <Button name="Show more" class="ShowMore-trends" />
       </div>
 
-      <div className="side-content--background">
+      <div className="side-content--background2">
         <h3>Who to follow</h3>
         <FollowingProposition />
         <FollowingProposition />

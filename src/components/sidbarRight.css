@@ -1,20 +1,40 @@
+.input-ground{
+    position: fixed;
+    background-color: black;
+    width: 19vw;
+    height: 6vh;
+    padding-top: 1rem;
+}
 .RightInput{
     border-radius: 1.5rem;
     border: none;
    width: 17vw;
-   height: 2.5rem;
+   height: 3rem;
    background-color: rgba(87, 86, 86, 0.514);
    margin-left:.7rem ;
 }
+.RightInput::placeholder{
+padding-left: 2rem;
+}
 .Side-content{
     margin:0px;
-    padding: 0px;
+    padding-inline: 1.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.side-content--background{
+.side-content--background1{
     margin: 1rem;
+    margin-top: 6rem;
+    padding: 0;
+    background-color: rgba(87, 86, 86, 0.514);
+     border-radius: 1.5rem;
+     width: 17vw;
+     max-height: auto;
+}
+.side-content--background2{
+    margin: 1rem;
+    margin-top: 1rem;
     padding: 1.2rem;
     background-color: rgba(87, 86, 86, 0.514);
      border-radius: 1.5rem;
@@ -26,7 +46,7 @@
     margin: 0;
 }
 .Side-content--paragraph{
-    padding: 0 0 2rem 0;
+    padding: 0;
     margin: 0;
 }
 .ShowMore-trends{
@@ -34,10 +54,11 @@
     outline: none;
     border: none;
     background-color: transparent;
-    padding: 0;
+    padding-left: 1.2rem;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    margin-bottom: 1rem;
 }
 .avatar-follow {
     border-radius: 100%;
@@ -66,4 +87,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.Side-content-trends{
+    margin:0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.trends{
+    margin-block: 0;
+    padding: 1rem 1rem 1rem 1.2rem;
+    cursor: pointer;
+    transition:.5s;
+}
+.trends:hover{
+    background-color: rgba(0, 0, 0, 0.67);
+    
+}
+span{
+    font-weight: bold;
 }

@@ -1,8 +1,8 @@
 export default function Trends(){
     return(
         <>
-      
-        <div className="Side-content">
+      <div className="trends">
+      <div className="Side-content-trends">
           <div>
                 <p className="Side-content--title"> Trending in turkey</p>
           </div>
@@ -32,6 +32,7 @@ export default function Trends(){
        <span>#SQUID</span> <br />
         20,660 tweets
         </p>
+      </div> 
      </>
     )
 }
