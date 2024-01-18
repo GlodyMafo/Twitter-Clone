@@ -3,15 +3,15 @@ import "./Tweet.css";
 
 export default function Tweet(props) {
   const [favorites, setfavorites] = useState(0);
-  const [favoritesActive, setfavoritesActive] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   function like() {
-    if (favoritesActive){
-      setfavoritesActive(false)
-      setfavorites(favorites-1)
-    }else{
-      setfavoritesActive(true)
-      setfavorites(favorites+1)
+    if (isFavorite) {
+      setIsFavorite(false);
+      setfavorites(favorites - 1);
+    } else {
+      setIsFavorite(true);
+      setfavorites(favorites + 1);
     }
   }
   return (
@@ -63,11 +63,13 @@ export default function Tweet(props) {
           <p className="react"> {props.retweets} </p>
         </div>
         <div className="reaction reaction-favorites">
+         
+
           <svg
             width="24"
             height="24"
             viewBox="0 0 24 24"
-            fill="#D9D9D9"
+            fill={isFavorite ? "red" : "white"}
             xmlns="http://www.w3.org/2000/svg"
             className="favorites"
             onClick={like}
