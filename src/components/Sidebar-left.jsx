@@ -1,5 +1,6 @@
 import Button from "./Btn";
 import "./sidebar-left.css";
+import {Link} from "react-router-dom";
 
 export default function Sidebar() {
   return (
@@ -31,7 +32,7 @@ export default function Sidebar() {
             fill="#D9D9D9"
           />
         </svg>
-        <h3 className="side-title">Home</h3>
+        <h3 className="side-title"> <Link to="/">Home</Link></h3>
       </div>
       <div className="side-element">
         <svg
@@ -47,7 +48,7 @@ export default function Sidebar() {
           />
         </svg>
 
-        <h3 className="side-title">Explore</h3>
+        <h3 className="side-title"><Link>Explore</Link></h3>
       </div>
 
       <div className="side-element">
@@ -63,7 +64,7 @@ export default function Sidebar() {
             fill="#D9D9D9"
           />
         </svg>
-        <h3 className="side-title">Notifications</h3>
+        <h3 className="side-title"><Link>Notifications</Link></h3>
       </div>
 
       <div className="side-element">
@@ -80,7 +81,7 @@ export default function Sidebar() {
           />
         </svg>
 
-        <h3 className="side-title">Mesaages</h3>
+        <h3 className="side-title"><Link>Messages</Link></h3>
       </div>
 
       <div className="side-element">
@@ -97,7 +98,7 @@ export default function Sidebar() {
           />
         </svg>
 
-        <h3 className="side-title">Bookmarks</h3>
+        <h3 className="side-title"><Link>Bookmarks</Link></h3>
       </div>
 
       <div className="side-element">
@@ -117,7 +118,7 @@ export default function Sidebar() {
             fill="#D9D9D9"
           />
         </svg>
-        <h3 className="side-title">Liste</h3>
+        <h3 className="side-title"><Link>Liste</Link></h3>
       </div>
 
       <div className="side-element">
@@ -134,7 +135,7 @@ export default function Sidebar() {
           />
         </svg>
 
-        <h3 className="side-title">Profil</h3>
+        <h3 className="side-title"><Link to="./profil">Profil</Link></h3>
       </div>
 
       <div className="side-element">
@@ -163,7 +164,7 @@ export default function Sidebar() {
           />
         </svg>
 
-        <h3 className="side-title"> More</h3>
+        <h3 className="side-title"><Link>More</Link></h3>
       </div>
       <Button name="Tweet" class="side-btn" />
       <div className="bottom-slide">

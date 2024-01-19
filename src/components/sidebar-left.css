@@ -29,6 +29,7 @@
 }
 .side-title {
   padding-left: 1rem;
+  text-decoration: none;
 }
 .side-btn {
   background-color: var(--blue);
@@ -72,3 +73,6 @@
 .name {
   padding-left: 1rem;
 }
+/* Link{
+  text-decoration: blue;
+} */

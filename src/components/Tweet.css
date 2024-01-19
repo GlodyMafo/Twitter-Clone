@@ -115,7 +115,7 @@
 }
 .favorites:hover {
   cursor: pointer;
-  fill: rgb(238, 14, 133);
+  fill: #ee0e85;
   background-color: rgba(238, 14, 133, 0.305);
 }
 
