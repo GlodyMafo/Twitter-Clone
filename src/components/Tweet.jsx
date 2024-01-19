@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import "./Tweet.css";
-import Islike, { IsNotLike } from "./Like";
 
 export default function Tweet(props) {
   const [favorites, setfavorites] = useState(0);

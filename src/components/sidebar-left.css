@@ -30,6 +30,7 @@
 .side-title {
   padding-left: 1rem;
   text-decoration: none;
+  color: white;
 }
 .side-btn {
   background-color: var(--blue);
