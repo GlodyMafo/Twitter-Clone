@@ -22,8 +22,8 @@ export default function Profil() {
         />
         <div className="avatar">
             <img  className="profil-avatar" src="src/assets/images/_MG_4654_083242.png" alt="" />
-            <Button name="Edit Profile" class="EditProfil"/>
         </div>
+        <Button name="Edit Profile" class="EditProfil"/>
       </div>
     </>
   );

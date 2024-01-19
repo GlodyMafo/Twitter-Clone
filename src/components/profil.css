@@ -22,31 +22,37 @@
   color: rgb(178, 174, 174);
 }
 
-.cover{
-    position:relative;
+.cover {
+  position: relative;
 }
 .cover-img {
   width: 41.2rem;
-  height: 15rem; 
+  height: 16rem;
 }
 .profil-avatar {
-  border: 2.5px solid black;
+  border: 3px solid black;
   border-radius: 100%;
-  width: 10rem;
-  height: 10rem;
-  margin-left:2rem ;
+  width: 8rem;
+  height: 8rem;
+  margin-left: 2rem;
 }
-.avatar{
-    position: absolute;
-    bottom: -80px;
-    /* display:flex; */
+.avatar {
+  position: absolute;
+  bottom: -10px;
+  /* display:flex; */
 }
-.EditProfil{
-color: white;
-padding: .5rem;
-background-color: inherit;
-border: 1px solid white;
-border-radius: 2rem;
-font-weight: 700;
-font-size: 16px;
+.EditProfil {
+  /* position: absolute; */
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0 0 31rem;
+  background-color: inherit;
+  border: 1px solid white;
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+.EditProfil:hover{
+    background-color: rgba(46, 45, 45, 0.514);
 }
