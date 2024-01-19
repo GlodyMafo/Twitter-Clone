@@ -21,17 +21,13 @@
   font-weight: 100;
   color: rgb(178, 174, 174);
 }
-.cover_profil {
-    position: relative;
-}
+
 .cover{
     position:relative;
 }
 .cover-img {
-  /* margin-top: 2.6rem; */
   width: 41.2rem;
-  height: 15rem;
-  /* position: relative; */
+  height: 15rem; 
 }
 .profil-avatar {
   border: 2.5px solid black;
@@ -43,4 +39,14 @@
 .avatar{
     position: absolute;
     bottom: -80px;
+    /* display:flex; */
+}
+.EditProfil{
+color: white;
+padding: .5rem;
+background-color: inherit;
+border: 1px solid white;
+border-radius: 2rem;
+font-weight: 700;
+font-size: 16px;
 }
