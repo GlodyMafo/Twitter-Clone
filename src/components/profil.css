@@ -1,3 +1,6 @@
+.profil{
+ border: 0.5px solid rgba(190, 186, 186, 0.237);
+}
 .navProfil {
   display: flex;
   align-items: center;
@@ -17,9 +20,11 @@
   height: 2rem;
 }
 .posts {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 100;
   color: rgb(178, 174, 174);
+  margin: 0;
+  padding: 0;
 }
 
 .cover {
@@ -55,4 +60,19 @@
 }
 .EditProfil:hover{
     background-color: rgba(46, 45, 45, 0.514);
+}
+.profil-info{
+  padding-left: 1.5rem;
+}
+.followers{
+  display: flex;
+  align-items: center;
+ gap: 2.5rem;
+}
+.menu{
+  display: flex;
+  justify-content: space-around;
+}
+.menu_content{
+  
 }

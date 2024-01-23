@@ -4,7 +4,8 @@ import "./profil.css";
 export default function Profil() {
   return (
     <>
-      <div className="navProfil">
+    <div className="profil">
+    <div className="navProfil">
         <img
           className="navProfil--icon"
           src="src/assets/Icons/retour.png"
@@ -29,6 +30,29 @@ export default function Profil() {
         </div>
         <Button name="Edit Profile" class="EditProfil" />
       </div>
+      <div className="profil-info">
+      <h3 className="user">Glody Mafo <br /> <span className="posts" >@glodymafo</span>  </h3>
+      <p>Mon attitude</p>
+      <p className="posts">Joined April 2021</p>
+      <div className="followers">
+        <p> <span>130</span> Following</p>
+        <p> <span>500</span> Followers</p>
+      </div>
+      </div>
+     
+      <div className="menu">
+        <p>Posts</p>
+        <p>Replies</p>
+        <p>Hightlihts</p>
+        <p>Media</p>
+        <p>Like</p>
+      </div>
+      <div className="menu_content">
+
+      </div>
+      <h3>Who to follow</h3>
+    </div>
+     
     </>
   );
 }
