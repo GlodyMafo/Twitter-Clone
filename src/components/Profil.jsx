@@ -1,42 +1,54 @@
+import React, { useState, useEffect} from "react";
+import axios from "axios";
 import Button from "./Btn";
 import FollowingProposition from "./FollowingProposition";
 import "./profil.css";
 
-export default function Profil() {
+export default function Profil(props) {
+
+  const [user, setuser]=useState({});
+  useEffect(() => {
+    axios.get("https://my-json-server.typicode.com/amare53/twiterdb/users")
+    .then(response => {
+    setPost(response.data)
+    })
+  });
+  console.log(user);
+
   return (
     <>
       <div className="profil">
         <div className="navProfil">
-          <img
+          <img 
             className="navProfil--icon"
             src="src/assets/Icons/retour.png"
             alt=""
           />
           <h1 className="user">
-            Glody Mafo <br /> <span className="posts">20 posts</span>
+            {props.pseudo} <br /> <span className="posts">{props.number} Posts</span>
           </h1>
         </div>
         <div className="cover">
           <img
             className="cover-img"
-            src="src/assets/images/codes-programmation-personne-afro-americaine-pour-serveur-pare-feu-ordinateur-programmeur-noir-utilisant-interface-codage-code-binaire-pour-developpement-sites-web-homme-afro-americain-travaillant-donnees (5).jpg"
-            alt=""
+            src={props.coverPicture}
           />
           <div className="avatar">
             <img
               className="profil-avatar"
-              src="src/assets/images/_MG_4654_083242.png"
-              alt=""
+              src={props.userAvatar}
+              // src="src/assets/images/_MG_4654_083242.png"
+              // alt=""
             />
           </div>
           <Button name="Edit Profile" class="EditProfil" />
         </div>
         <div className="profil-info">
           <h3 className="user">
-            Glody Mafo <br /> <span className="posts">@glodymafo</span>{" "}
+          {props.pseudo} <br /> <span className="posts">@{props.username}</span>{" "}
           </h3>
           <p>Mon attitude</p>
-          <p className="posts">Joined April 2021</p>
+          <p className="posts"> {props.joined} </p>
           <div className="followers">
             <p>
               {" "}

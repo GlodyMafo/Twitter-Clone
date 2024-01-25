@@ -1,7 +1,7 @@
 import Button from "./Btn";
 import "./home.css";
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
       <section className="home">
@@ -17,8 +17,7 @@ export default function Home() {
           <span className="main-intro">
             <img
               className="Home-avatar"
-              src="src/assets/images/_MG_4654_083242.png"
-              alt=""
+              src={props.userAvatar}
             />
             <textarea
               className="intro-msg"
