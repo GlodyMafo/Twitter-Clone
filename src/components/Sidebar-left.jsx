@@ -2,7 +2,7 @@ import Button from "./Btn";
 import "./sidebar-left.css";
 import {Link} from "react-router-dom";
 
-export default function Sidebar() {
+export default function Sidebar(props) {
   return (
     <>
       <svg
@@ -176,13 +176,12 @@ export default function Sidebar() {
         <div className="bottom-slide-content">
           <img
             className="side-avatar"
-            src="src/assets/images/_MG_4654_083242.png"
+            src={props.userAvatar}
             alt=""
           />
           <div>
             <p className="name">
-              {" "}
-              <span>Mafo Glody</span> <br /> @glodymafo
+              <span> {props.pseudo} </span> <br /> @{props.userName}
             </p>
           </div>
         </div>

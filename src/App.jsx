@@ -34,24 +34,28 @@ function App() {
     <>
       <div className="disposition">
         <div className="side-left">
-          <Sidebar />
+          <Sidebar 
+          userAvatar={user.profil}
+          pseudo={user.name}
+          userName={user.username}
+          />
         </div>
         <Routes>
           <Route
             path="/profil"
             element={
               <container className="home-app">
-                {/* {user((item) => ( */}
+               
                   <Profil
                     key={user.id}
                     userAvatar={user.profil}
-                    pseudo={user.username}
-                    username={user.name}
+                    pseudo={user.name}
+                    username={user.username}
                     number="25"
                     coverPicture={user.thumbnailProfil}
                     joined={user.Joined}
                   />
-                {/* ))} */}
+              
               </container>
             }
           />

@@ -3,17 +3,19 @@ import axios from "axios";
 import Button from "./Btn";
 import FollowingProposition from "./FollowingProposition";
 import "./profil.css";
+import Tweet from "./Tweet";
 
 export default function Profil(props) {
 
-  const [user, setuser]=useState({});
+  const [post, setPost] = useState([]);
+
   useEffect(() => {
-    axios.get("https://my-json-server.typicode.com/amare53/twiterdb/users")
-    .then(response => {
-    setPost(response.data)
-    })
+    axios
+      .get("https://my-json-server.typicode.com/amare53/twiterdb/posts")
+      .then((response) => {
+        setPost(response.data);
+      });
   });
-  console.log(user);
 
   return (
     <>
@@ -37,8 +39,6 @@ export default function Profil(props) {
             <img
               className="profil-avatar"
               src={props.userAvatar}
-              // src="src/assets/images/_MG_4654_083242.png"
-              // alt=""
             />
           </div>
           <Button name="Edit Profile" class="EditProfil" />
@@ -69,16 +69,18 @@ export default function Profil(props) {
           <p>Like</p>
         </div>
         <div className="menu_content">
-          <h3>Who to follow</h3>
-          <FollowingProposition />
-          <p>Lorem ipsum dolor sit amet.</p>
-          <FollowingProposition />
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, iure!
-          <FollowingProposition />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          <FollowingProposition />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, eius
-          asperiores!
+        {post.map((item) => (
+                  <Tweet 
+                    author_avatar={item.thumbnailUrl}
+                    source={item.userId}
+                    id={item.id}
+                    text={item.body}
+                    image={item.url}
+                    replies={item.replies}
+                    retweets={item.repost}
+                    favorites={item.like}
+                  />
+                ))}
         </div>
       </div>
     </>

@@ -6,10 +6,13 @@ import "./sidbarRight.css";
 export default function SidebarRright() {
   return (
     <>
-    <div className="input-ground">
-    <input className="RightInput" type="text" placeholder="Search twitter" />
-    </div>
-     
+      <div className="input-ground">
+        <input
+          className="RightInput"
+          type="text"
+          placeholder="Search twitter"
+        />
+      </div>
 
       <div className="side-content--background1">
         <div className="Side-content">
