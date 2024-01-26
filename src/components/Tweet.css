@@ -20,6 +20,11 @@
   padding-left: 0.5rem;
   cursor: pointer;
 }
+.react-favorite {
+  padding-left: 0.5rem;
+  cursor: pointer;
+  color:#ee0e85;
+}
 .pub {
   display: flex;
 

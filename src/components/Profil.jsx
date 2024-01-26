@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import Button from "./Btn";
 import "./profil.css";
@@ -6,26 +7,6 @@ import Tweet from "./Tweet";
 
 export default function Profil(props) {
 
-  // const [posts, setPost] = useState([]);
-  // const[user,setUser]=useState([]);
-
-  // useEffect(() => {
-  //   axios
-  //     .get("https://my-json-server.typicode.com/amare53/twiterdb/user")
-  //     .then((res) => {
-  //       setUser(res.data);
-  //     });
-  // });
-
-  // // useEffect(() => {
-  // //   axios
-  // //     .get("https://my-json-server.typicode.com/amare53/twiterdb/posts")
-  // //     .then((response) => {
-  // //       setPost(response.data);
-  // //     });
-  // // });
-
-  // const findUser=user.filter((User)=>(User.id==user[0])) 
 
   const [posts, setPost] = useState([]);
   const [users, setUsers] = useState([]);
@@ -52,11 +33,13 @@ export default function Profil(props) {
     <>
       <div className="profil">
         <div className="navProfil">
+        <Link className="link-style" to="/">
           <img 
             className="navProfil--icon"
             src="src/assets/Icons/retour.png"
             alt=""
           />
+          </Link>
           <h1 className="user">
             {props.pseudo} <br /> <span className="posts">{props.number} Posts</span>
           </h1>

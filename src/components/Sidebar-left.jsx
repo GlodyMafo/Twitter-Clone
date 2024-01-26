@@ -1,6 +1,6 @@
 import Button from "./Btn";
 import "./sidebar-left.css";
-import { Route, Routes,Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Sidebar(props) {
   return (

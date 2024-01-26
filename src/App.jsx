@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router-dom";
 import {v4 as uuidv4} from "uuid"
 import axios from "axios";
 import "./App.css";
-import tweets from "./tweets-x.json";
 import Home from "./components/Home";
 import Tweet from "./components/Tweet";
 import Sidebar from "./components/Sidebar-left";
@@ -39,10 +38,6 @@ function App() {
         setUser(resp.data);
       });
   }, []);
-  // const addPost=posting=>{
-  //   setPost([...posts,{id: uuidv4(), act: posting, completed:false}])
-  //   console.log(posts);
-  // }
  
 
   return (
@@ -88,23 +83,12 @@ function App() {
                     id={post.id}
                     text={post.body}
                     image={post.url}
-                    replies={post.replies}
+                    replies="320"
                     retweets={post.repost}
                     favorites={post.like}
                   />
                 ))}
-                {/* {tweets.map((item) => (
-                  <Tweet
-                    author_avatar={item.author_avatar}
-                    source={item.source}
-                    id={item.id}
-                    text={item.text}
-                    image={item.image}
-                    replies={item.replies}
-                    retweets={item.retweets}
-                    favorites={item.favorites}
-                  />
-                ))} */}
+             
               </div>
             }
           />
