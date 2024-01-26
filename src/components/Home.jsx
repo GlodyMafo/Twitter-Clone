@@ -1,7 +1,17 @@
+import React, { useState, useEffect } from "react";
 import Button from "./Btn";
 import "./home.css";
 
 export default function Home(props) {
+  const [valueTweet,setValueTweet]=useState("")
+  
+  const handleSubmit=e=>{
+    e.preventDefault();
+
+    console.log(valueTweet);
+
+    setValueTweet("")
+  }
   return (
     <>
       <section className="home">
@@ -12,8 +22,8 @@ export default function Home(props) {
         </div>
 
         {/* *******************************Main************************** */}
-
-        <div className="main">
+<form onSubmit={handleSubmit}>
+<div className="main">
           <span className="main-intro">
             <img
               className="Home-avatar"
@@ -23,8 +33,9 @@ export default function Home(props) {
               className="intro-msg"
               cols="45"
               rows="auto"
-              placeholder="What is happening?"
-            ></textarea>
+              placeholder="What is happening?" onChange={(e)=>setValueTweet(e.target.value)}
+              value={valueTweet}
+            > </textarea>
           </span>
         </div>
 
@@ -132,10 +143,12 @@ export default function Home(props) {
               </svg>
             </div>
             <div>
-              <Button name="Tweet" class="Home-btn" />
+              <Button type="submit" name="Tweet" class="Home-btn" />
             </div>
           </div>
         </div>
+</form>
+      
       </section>
     </>
   );

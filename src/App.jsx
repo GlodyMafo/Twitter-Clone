@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
+import {v4 as uuidv4} from "uuid"
 import axios from "axios";
 import "./App.css";
 import tweets from "./tweets-x.json";
@@ -8,11 +9,13 @@ import Tweet from "./components/Tweet";
 import Sidebar from "./components/Sidebar-left";
 import SidebarRright from "./components/Sidebar-right";
 import Profil from "./components/Profil";
+uuidv4()
 
 function App() {
   const [posts, setPost] = useState([]);
   const [users, setUsers] = useState([]);
   const [user, setUser] = useState([]);
+  // const [newPost,setNewPost]=useState([])
 
   useEffect(() => {
     axios
@@ -36,6 +39,10 @@ function App() {
         setUser(resp.data);
       });
   }, []);
+  // const addPost=posting=>{
+  //   setPost([...posts,{id: uuidv4(), act: posting, completed:false}])
+  //   console.log(posts);
+  // }
  
 
   return (
