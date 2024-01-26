@@ -1,13 +1,21 @@
 import React, { useState, useEffect} from "react";
 import axios from "axios";
 import Button from "./Btn";
-import FollowingProposition from "./FollowingProposition";
 import "./profil.css";
 import Tweet from "./Tweet";
 
 export default function Profil(props) {
 
   const [post, setPost] = useState([]);
+  const[user,setUser]=useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://my-json-server.typicode.com/amare53/twiterdb/user")
+      .then((res) => {
+        setUser(res.data);
+      });
+  });
 
   useEffect(() => {
     axios
@@ -16,6 +24,8 @@ export default function Profil(props) {
         setPost(response.data);
       });
   });
+
+  const findUser=user.filter((User)=>(User.id==user[0])) 
 
   return (
     <>
@@ -68,7 +78,8 @@ export default function Profil(props) {
           <p>Media</p>
           <p>Like</p>
         </div>
-        <div className="menu_content">
+      </div>
+      <div className="menu_content">
         {post.map((item) => (
                   <Tweet 
                     author_avatar={item.thumbnailUrl}
@@ -82,7 +93,6 @@ export default function Profil(props) {
                   />
                 ))}
         </div>
-      </div>
     </>
   );
 }

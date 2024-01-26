@@ -12,6 +12,7 @@ import Profil from "./components/Profil";
 function App() {
   const [post, setPost] = useState([]);
   const [user, setUser] = useState({});
+ 
 
   useEffect(() => {
     axios
@@ -28,7 +29,6 @@ function App() {
         setUser(res.data);
       });
   });
-  console.log(user);
 
   return (
     <>
