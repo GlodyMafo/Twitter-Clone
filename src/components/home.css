@@ -36,6 +36,9 @@
   font-size: 20px;
 }
 .intro-msg {
+  --webkit-appearance:none;
+  appearance: none;
+  overflow-y: hidden;
   padding-left: 1rem;
   padding-top: 1rem;
   background-color: inherit;
