@@ -6,7 +6,7 @@ import Tweet from "./Tweet";
 
 export default function Profil(props) {
 
-  const [post, setPost] = useState([]);
+  const [posts, setPost] = useState([]);
   const[user,setUser]=useState([]);
 
   useEffect(() => {
@@ -80,16 +80,19 @@ export default function Profil(props) {
         </div>
       </div>
       <div className="menu_content">
-        {post.map((item) => (
-                  <Tweet 
-                    author_avatar={item.thumbnailUrl}
-                    source={item.userId}
-                    id={item.id}
-                    text={item.body}
-                    image={item.url}
-                    replies={item.replies}
-                    retweets={item.repost}
-                    favorites={item.like}
+      {posts.map((post) => (
+                  <Tweet
+                    key={post.id}
+                    author_avatar={
+                      user.find((x) => x.id === post.userId)?.thumbnailProfil
+                    }
+                    source={user.find((x) => x.id === post.userId)?.name}
+                    id={post.id}
+                    text={post.body}
+                    image={post.url}
+                    replies={post.replies}
+                    retweets={post.repost}
+                    favorites={post.like}
                   />
                 ))}
         </div>

@@ -10,9 +10,8 @@ import SidebarRright from "./components/Sidebar-right";
 import Profil from "./components/Profil";
 
 function App() {
-  const [post, setPost] = useState([]);
-  const [user, setUser] = useState({});
- 
+  const [posts, setPost] = useState([]);
+  const [user, setUser] = useState([]);
 
   useEffect(() => {
     axios
@@ -20,61 +19,63 @@ function App() {
       .then((response) => {
         setPost(response.data);
       });
-  });
+  }, []);
 
   useEffect(() => {
     axios
-      .get("https://my-json-server.typicode.com/amare53/twiterdb/users/1")
+      .get("https://my-json-server.typicode.com/amare53/twiterdb/users")
       .then((res) => {
         setUser(res.data);
       });
-  });
+  }, []);
+  console.log(user);
 
   return (
     <>
       <div className="disposition">
         <div className="side-left">
-          <Sidebar 
-          userAvatar={user.profil}
-          pseudo={user.name}
-          userName={user.username}
+          <Sidebar
+            userAvatar={user.profil}
+            pseudo={user.name}
+            userName={user.username}
           />
         </div>
         <Routes>
           <Route
             path="/profil"
             element={
-              <container className="home-app">
-               
-                  <Profil
-                    key={user.id}
-                    userAvatar={user.profil}
-                    pseudo={user.name}
-                    username={user.username}
-                    number="25"
-                    coverPicture={user.thumbnailProfil}
-                    joined={user.Joined}
-                  />
-              
-              </container>
+              <div className="home-app">
+                <Profil
+                  key={user.id}
+                  userAvatar={user.profil}
+                  pseudo={user.name}
+                  username={user.username}
+                  number="25"
+                  coverPicture={user.thumbnailProfil}
+                  joined={user.Joined}
+                />
+              </div>
             }
           />
           <Route
             path="/"
             element={
-              <container className="home-app">
-                <Home 
-                userAvatar={user.profil}/>
-                {post.map((item) => (
+              <div className="home-app">
+                <Home userAvatar={user.profil} />
+
+                {posts.map((post) => (
                   <Tweet
-                    author_avatar={item.thumbnailUrl}
-                    source={item.userId}
-                    id={item.id}
-                    text={item.body}
-                    image={item.url}
-                    replies={item.replies}
-                    retweets={item.repost}
-                    favorites={item.like}
+                    key={post.id}
+                    author_avatar={
+                      user.find((x) => x.id === post.userId)?.thumbnailProfil
+                    }
+                    source={user.find((x) => x.id === post.userId)?.name}
+                    id={post.id}
+                    text={post.body}
+                    image={post.url}
+                    replies={post.replies}
+                    retweets={post.repost}
+                    favorites={post.like}
                   />
                 ))}
                 {/* {tweets.map((item) => (
@@ -89,7 +90,7 @@ function App() {
                     favorites={item.favorites}
                   />
                 ))} */}
-              </container>
+              </div>
             }
           />
         </Routes>
