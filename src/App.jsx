@@ -11,6 +11,7 @@ import Profil from "./components/Profil";
 
 function App() {
   const [posts, setPost] = useState([]);
+  const [users, setUsers] = useState([]);
   const [user, setUser] = useState([]);
 
   useEffect(() => {
@@ -25,10 +26,17 @@ function App() {
     axios
       .get("https://my-json-server.typicode.com/amare53/twiterdb/users")
       .then((res) => {
-        setUser(res.data);
+        setUsers(res.data);
       });
   }, []);
-  console.log(user);
+  useEffect(() => {
+    axios
+      .get("https://my-json-server.typicode.com/amare53/twiterdb/users/1")
+      .then((resp) => {
+        setUser(resp.data);
+      });
+  }, []);
+ 
 
   return (
     <>
@@ -67,9 +75,9 @@ function App() {
                   <Tweet
                     key={post.id}
                     author_avatar={
-                      user.find((x) => x.id === post.userId)?.thumbnailProfil
+                      users.find((x) => x.id === post.userId)?.thumbnailProfil
                     }
-                    source={user.find((x) => x.id === post.userId)?.name}
+                    source={users.find((x) => x.id === post.userId)?.name}
                     id={post.id}
                     text={post.body}
                     image={post.url}

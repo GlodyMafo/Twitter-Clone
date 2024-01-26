@@ -6,16 +6,29 @@ import Tweet from "./Tweet";
 
 export default function Profil(props) {
 
-  const [posts, setPost] = useState([]);
-  const[user,setUser]=useState([]);
+  // const [posts, setPost] = useState([]);
+  // const[user,setUser]=useState([]);
 
-  useEffect(() => {
-    axios
-      .get("https://my-json-server.typicode.com/amare53/twiterdb/user")
-      .then((res) => {
-        setUser(res.data);
-      });
-  });
+  // useEffect(() => {
+  //   axios
+  //     .get("https://my-json-server.typicode.com/amare53/twiterdb/user")
+  //     .then((res) => {
+  //       setUser(res.data);
+  //     });
+  // });
+
+  // // useEffect(() => {
+  // //   axios
+  // //     .get("https://my-json-server.typicode.com/amare53/twiterdb/posts")
+  // //     .then((response) => {
+  // //       setPost(response.data);
+  // //     });
+  // // });
+
+  // const findUser=user.filter((User)=>(User.id==user[0])) 
+
+  const [posts, setPost] = useState([]);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     axios
@@ -23,9 +36,17 @@ export default function Profil(props) {
       .then((response) => {
         setPost(response.data);
       });
-  });
+  }, []);
 
-  const findUser=user.filter((User)=>(User.id==user[0])) 
+
+  useEffect(() => {
+    axios
+      .get("https://my-json-server.typicode.com/amare53/twiterdb/users")
+      .then((resp) => {
+        setUsers(resp.data);
+      });
+  }, []);
+ 
 
   return (
     <>
@@ -84,9 +105,9 @@ export default function Profil(props) {
                   <Tweet
                     key={post.id}
                     author_avatar={
-                      user.find((x) => x.id === post.userId)?.thumbnailProfil
+                      users.find((x) => x.id === post.userId)?.thumbnailProfil
                     }
-                    source={user.find((x) => x.id === post.userId)?.name}
+                    source={users.find((x) => x.id === post.userId)?.name}
                     id={post.id}
                     text={post.body}
                     image={post.url}
