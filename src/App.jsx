@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import {v4 as uuidv4} from "uuid"
+import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import "./App.css";
 import Home from "./components/Home";
@@ -8,7 +8,8 @@ import Tweet from "./components/Tweet";
 import Sidebar from "./components/Sidebar-left";
 import SidebarRright from "./components/Sidebar-right";
 import Profil from "./components/Profil";
-uuidv4()
+import { Auth } from "./components/Authentification";
+uuidv4();
 
 function App() {
   const [posts, setPost] = useState([]);
@@ -38,10 +39,12 @@ function App() {
         setUser(resp.data);
       });
   }, []);
- 
 
   return (
     <>
+{/* 
+<Auth/> */}
+
       <div className="disposition">
         <div className="side-left">
           <Sidebar
@@ -88,7 +91,6 @@ function App() {
                     favorites={post.like}
                   />
                 ))}
-             
               </div>
             }
           />
@@ -98,6 +100,8 @@ function App() {
           <SidebarRright />
         </div>
       </div>
+
+      
     </>
   );
 }
