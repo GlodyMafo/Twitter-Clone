@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 // import "./App.css";
@@ -8,12 +7,16 @@ import { ClientAuth } from "./components/ClientAuth";
 uuidv4();
 
 function App() {
-
   return (
     <>
-    <ClientAuth/>
-{/* <HomeManage/>     */}
+      <Routes>
+        <Route path="/" element={<ClientAuth />} />
+
+        <Route path="/homefield" element={<HomeManage />} />
+      </Routes>
+      
     </>
+    
   );
 }
 
