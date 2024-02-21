@@ -1,0 +1,42 @@
+.ajust {
+margin-inline: 22rem;
+margin-block: 12rem;
+padding: 4rem;
+width:30rem;
+background-color: rgba(145, 142, 142, 0.17);
+border:solid .5px white;
+border-radius: 2rem;
+}
+.Form{
+    display: flex;
+    flex-direction: column;
+}
+.Auth-btn {
+    background-color: var(--blue);
+    color: var(--text);
+    border-style: none;
+    padding: 1rem;
+    margin-block: 1rem;
+    width: 30rem;
+    height: 3rem;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.5s;
+  }
+
+.iputsDes{
+    width: 28rem;
+    height: 1rem;
+    padding: 1rem;
+    color:white;
+    border:solid .5px white;
+    background-color: inherit;
+    margin-block: 1rem;
+    font-size: 18px;
+}
+
+.alingLink{
+    display:flex;
+    justify-content: space-between;
+}

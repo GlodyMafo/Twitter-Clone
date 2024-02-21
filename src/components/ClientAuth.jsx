@@ -1,12 +1,13 @@
 import { Login } from "./Login";
 import { Route, Routes } from "react-router-dom";
 import { Signup } from "./SignUp";
+import "./auth.css";
 
-
-export function Auth() {
+export function ClientAuth() {
   return (
     <>
-      <svg
+    <div className="ajust">
+    <svg
         width="30"
         height="30"
         viewBox="0 0 24 24"
@@ -19,7 +20,7 @@ export function Auth() {
       <Routes>
         
         <Route
-          path="/signup"
+          path="/"
           element={
             <div className="">
               <Login />
@@ -28,7 +29,7 @@ export function Auth() {
         />
 
         <Route
-          path="/"
+          path="/signup"
           element={
             <div className="">
               <Signup />
@@ -36,6 +37,8 @@ export function Auth() {
           }
         />
       </Routes>
+    </div>
+     
     </>
   );
 }
