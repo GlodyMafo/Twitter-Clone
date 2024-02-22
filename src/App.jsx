@@ -9,12 +9,13 @@ uuidv4();
 function App() {
   return (
     <>
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<ClientAuth />} />
 
         <Route path="/homefield" element={<HomeManage />} />
-      </Routes>
-      
+      </Routes> */}
+
+      <ClientAuth />
     </>
     
   );

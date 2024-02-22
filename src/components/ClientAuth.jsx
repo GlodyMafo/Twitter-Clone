@@ -1,9 +1,15 @@
 import { Login } from "./Login";
 import { Route, Routes } from "react-router-dom";
 import { Signup } from "./SignUp";
+
 import "./auth.css";
 
 export function ClientAuth() {
+
+ 
+   
+
+  
   return (
     <>
     <div className="ajust">
@@ -38,7 +44,6 @@ export function ClientAuth() {
         />
       </Routes>
     </div>
-     
     </>
   );
 }
